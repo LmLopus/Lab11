@@ -24,15 +24,15 @@ public class Lab11 {
 	
 		try {
 			if (categoryChosen.contentEquals("Science Fiction")) {
-				 ArrayList<String> scifi = new ArrayList<String>(list.subList(0, 4));
+				 ArrayList<String> scifi = new ArrayList<String>(list.subList(0, 3));
 			     System.out.println(scifi.toString());
 			}
 			else if (categoryChosen.contentEquals("Drama")) {
-				 ArrayList<String> drama = new ArrayList<String>(list.subList(6, 9));
+				 ArrayList<String> drama = new ArrayList<String>(list.subList(6, 8));
 			     System.out.println(drama.toString());
 			}
 			else if (categoryChosen.contentEquals("Horror")) {
-				 ArrayList<String> scifi = new ArrayList<String>(list.subList(4, 6));
+				 ArrayList<String> scifi = new ArrayList<String>(list.subList(3, 5));
 			     System.out.println(scifi.toString());
 			}
 			else if (categoryChosen.contentEquals("Animated")) {
@@ -45,12 +45,19 @@ public class Lab11 {
 			}
 			
 			System.out.println("Would you like to continue? yes or no");
+			
+	
 			String yesOrNo = scnr.nextLine();
-			if(yesOrNo.equals("yes"));
-			else 
+			if(yesOrNo.equals("yes")){
+				
+			}
+			else if (yesOrNo.equals("no")){
+				System.out.println("Goodbye");
 				flag = false;
-			
-			
+			}
+			else {
+				throw new InputMismatchException("That was not a valid input)");
+		}
 		}catch (InputMismatchException e){
 			throw new InputMismatchException("That was not a valid input");
 		}
